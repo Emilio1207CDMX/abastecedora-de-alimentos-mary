@@ -1,0 +1,1693 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Compra abarrotes, cremería, salchichonería, frutas, verduras, carnes y más en Abastecedora de Alimentos Mary. Calidad y frescura en cada producto.">
+    <meta name="keywords" content="abarrotes, cremería, frutas, verduras, carnes, dulcería, limpieza, hogar, supermercado en línea, CDMX">
+    <meta name="author" content="Abastecedora de Alimentos Mary">
+    <meta name="robots" content="index, follow">
+    <title>Abastecedora de Alimentos Mary | Abarrotes, Cremesía y Más</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --primary-color: #4CAF50;
+            --secondary-color: #FF9800;
+            --accent-color: #F44336;
+            --light-color: #f9f9f9;
+            --dark-color: #333; 
+            --text-color: #444;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            background-color: var(--light-color);
+        }
+        
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 15px;
+        }
+        
+        /* Header Styles */
+        header {
+            background-color: white;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        
+        .header-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 0;
+        }
+        
+        .logo {
+            display: flex;
+            align-items: center;
+        }
+        
+        .logo h1 {
+            font-size: 1.8rem;
+            color: var(--primary-color);
+            margin-left: 10px;
+        }
+        
+        .logo span {
+            color: var(--secondary-color);
+        }
+        
+        .logo-icon {
+            font-size: 2.5rem;
+            color: var(--primary-color);
+        }
+        
+        nav ul {
+            display: flex;
+            list-style: none;
+            align-items: center;
+        }
+        
+        nav ul li {
+            margin-left: 1.5rem;
+        }
+        
+        nav ul li a {
+            color: var(--dark-color);
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+        
+        nav ul li a:hover {
+            color: var(--primary-color);
+        }
+        
+        .login-btn {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 0.3rem 0.8rem;
+            border-radius: 5px;
+            text-decoration: none;
+            transition: background-color 0.3s;
+            font-size: 0.9rem;
+        }
+        
+        .login-btn:hover {
+            background-color: #3d8b40;
+        }
+        
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('https://images.unsplash.com/photo-1498837167922-ddd27525d352?ixlib=rb-4.0.3&auto=format&fit=crop&w=1950&q=80');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            padding: 5rem 0;
+            text-align: center;
+        }
+        
+        .hero h2 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+        
+        .hero p {
+            font-size: 1.2rem;
+            max-width: 800px;
+            margin: 0 auto 2rem;
+        }
+        
+        .btn {
+            display: inline-block;
+            background-color: var(--secondary-color);
+            color: white;
+            padding: 0.8rem 1.8rem;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: background-color 0.3s, transform 0.3s;
+        }
+        
+        .btn:hover {
+            background-color: #e68900;
+            transform: translateY(-3px);
+        }
+        
+        /* Products Section */
+        .products {
+            padding: 5rem 0;
+        }
+        
+        .section-title {
+            text-align: center;
+            margin-bottom: 3rem;
+            color: var(--primary-color);
+            position: relative;
+            padding-bottom: 1rem;
+        }
+        
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 3px;
+            background-color: var(--secondary-color);
+        }
+        
+        .categories {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-bottom: 3rem;
+        }
+        
+        .category-card {
+            background-color: white;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s;
+        }
+        
+        .category-card:hover {
+            transform: translateY(-10px);
+        }
+        
+        .category-img {
+            height: 200px;
+            background-color: #f5f5f5;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 3rem;
+            color: var(--primary-color);
+        }
+        
+        .category-content {
+            padding: 1.5rem;
+            text-align: center;
+        }
+        
+        .category-content h3 {
+            color: var(--primary-color);
+            margin-bottom: 0.5rem;
+        }
+        
+        /* Process Section */
+        .process {
+            padding: 5rem 0;
+            background-color: white;
+        }
+        
+        .process-intro {
+            text-align: center;
+            max-width: 800px;
+            margin: 0 auto 3rem;
+        }
+        
+        .process-intro h2 {
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+        }
+        
+        .process-steps {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            counter-reset: step-counter;
+        }
+        
+        .process-step {
+            background-color: var(--light-color);
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            position: relative;
+            counter-increment: step-counter;
+        }
+        
+        .process-step::before {
+            content: counter(step-counter);
+            position: absolute;
+            top: -15px;
+            left: -15px;
+            width: 40px;
+            height: 40px;
+            background-color: var(--primary-color);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            font-size: 1.2rem;
+        }
+        
+        .process-step h3 {
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+            padding-right: 30px;
+        }
+        
+        .process-step p {
+            margin-bottom: 0.5rem;
+        }
+        
+        .process-step .step-icon {
+            font-size: 2rem;
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+        }
+        
+        .payment-methods {
+            display: flex;
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+        
+        .payment-method {
+            background-color: white;
+            padding: 0.8rem;
+            border-radius: 5px;
+            text-align: center;
+            flex: 1;
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+        }
+        
+        .payment-method i {
+            font-size: 1.5rem;
+            color: var(--primary-color);
+            margin-bottom: 0.5rem;
+        }
+        
+        .process-cta {
+            text-align: center;
+            margin-top: 3rem;
+        }
+        
+        /* Catalog Section */
+        .catalog {
+            padding: 5rem 0;
+            background-color: white;
+        }
+        
+        .catalog-actions {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 2rem;
+            align-items: center;
+        }
+        
+        .filter-search {
+            display: flex;
+            gap: 1rem;
+        }
+        
+        .filter-search input, 
+        .filter-search select {
+            padding: 0.8rem;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+        
+        .add-product-btn {
+            background-color: var(--primary-color);
+            color: white;
+            border: none;
+            padding: 0.8rem 1.5rem;
+            border-radius: 5px;
+            cursor: pointer;
+            font-weight: bold;
+            transition: background-color 0.3s;
+            display: none;
+        }
+        
+        .add-product-btn:hover {
+            background-color: #3d8b40;
+        }
+        
+        .products-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 2rem;
+        }
+        
+        .product-card {
+            background-color: var(--light-color);
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s;
+            position: relative;
+        }
+        
+        .product-card:hover {
+            transform: translateY(-5px);
+        }
+        
+        .product-image {
+            height: 200px;
+            background-color: #f5f5f5;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+        }
+        
+        .product-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        
+        .product-info {
+            padding: 1.5rem;
+        }
+        
+        .product-info h3 {
+            color: var(--primary-color);
+            margin-bottom: 0.5rem;
+        }
+        
+        .product-price {
+            font-weight: bold;
+            color: var(--accent-color);
+            font-size: 1.2rem;
+            margin: 0.5rem 0;
+        }
+        
+        .product-category {
+            display: inline-block;
+            background-color: var(--secondary-color);
+            color: white;
+            padding: 0.3rem 0.8rem;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            margin-bottom: 1rem;
+        }
+        
+        .product-actions {
+            display: flex;
+            justify-content: space-between;
+        }
+        
+        .product-actions button {
+            background-color: var(--primary-color);
+            color: white;
+            border: none;
+            padding: 0.5rem 1rem;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            display: none;
+        }
+        
+        .product-actions button:hover {
+            background-color: #3d8b40;
+        }
+        
+        /* Modal */
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            z-index: 1000;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .modal-content {
+            background-color: white;
+            padding: 2rem;
+            border-radius: 8px;
+            width: 90%;
+            max-width: 500px;
+            max-height: 90vh;
+            overflow-y: auto;
+        }
+        
+        .modal-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 1.5rem;
+        }
+        
+        .close-modal {
+            background: none;
+            border: none;
+            font-size: 1.5rem;
+            cursor: pointer;
+        }
+        
+        .form-group {
+            margin-bottom: 1rem;
+        }
+        
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: 500;
+        }
+        
+        .form-group input,
+        .form-group select,
+        .form-group textarea {
+            width: 100%;
+            padding: 0.8rem;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+        
+        /* Drag & Drop Area */
+        .drop-area {
+            border: 2px dashed #ccc;
+            border-radius: 8px;
+            padding: 2rem;
+            text-align: center;
+            margin-bottom: 1rem;
+            transition: all 0.3s;
+            background-color: #f9f9f9;
+        }
+        
+        .drop-area.highlight {
+            border-color: var(--primary-color);
+            background-color: rgba(76, 175, 80, 0.1);
+        }
+        
+        .drop-area p {
+            margin-bottom: 1rem;
+            color: #666;
+        }
+        
+        .drop-area-icon {
+            font-size: 2.5rem;
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+        }
+        
+        .image-preview {
+            margin-top: 1rem;
+            display: none;
+            max-width: 100%;
+            border-radius: 5px;
+            overflow: hidden;
+        }
+        
+        .image-preview img {
+            max-width: 100%;
+            max-height: 200px;
+            object-fit: contain;
+        }
+        
+        .form-actions {
+            display: flex;
+            justify-content: flex-end;
+            gap: 1rem;
+            margin-top: 1.5rem;
+        }
+        
+        .form-actions button {
+            padding: 0.8rem 1.5rem;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-weight: bold;
+        }
+        
+        .btn-cancel {
+            background-color: #ccc;
+            color: var(--dark-color);
+        }
+        
+        .btn-submit {
+            background-color: var(--primary-color);
+            color: white;
+        }
+        
+        /* Services Section */
+        .services {
+            padding: 5rem 0;
+            background-color: white;
+        }
+        
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+        
+        .service-card {
+            text-align: center;
+            padding: 2rem;
+            border-radius: 8px;
+            background-color: var(--light-color);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+        }
+        
+        .service-icon {
+            font-size: 2.5rem;
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+        }
+        
+        .service-card h3 {
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+        }
+        
+        /* About Section */
+        .about {
+            padding: 5rem 0;
+        }
+        
+        .about-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            align-items: center;
+        }
+        
+        .about-text h2 {
+            color: var(--primary-color);
+            margin-bottom: 1.5rem;
+        }
+        
+        .about-text p {
+            margin-bottom: 1rem;
+        }
+        
+        .about-image {
+            background: linear-gradient(var(--primary-color), var(--secondary-color));
+            height: 400px;
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 1.2rem;
+            text-align: center;
+            padding: 2rem;
+            flex-direction: column;
+        }
+        
+        .about-image i {
+            font-size: 4rem;
+            margin-bottom: 1.5rem;
+        }
+        
+        /* Contact Section */
+        .contact {
+            padding: 5rem 0;
+            background-color: white;
+        }
+        
+        .contact-info {
+            text-align: center;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        
+        .contact-info h3 {
+            color: var(--primary-color);
+            margin-bottom: 1.5rem;
+        }
+        
+        .contact-info p {
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .contact-info i {
+            margin-right: 10px;
+            color: var(--primary-color);
+            min-width: 20px;
+        }
+        
+        .map-link {
+            color: var(--primary-color);
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        
+        .map-link:hover {
+            color: var(--secondary-color);
+            text-decoration: underline;
+        }
+        
+        /* WhatsApp Button */
+        .whatsapp-float {
+            position: fixed;
+            width: 60px;
+            height: 60px;
+            bottom: 25px;
+            right: 25px;
+            background-color: #25d366;
+            color: white;
+            border-radius: 50px;
+            text-align: center;
+            font-size: 30px;
+            box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3);
+            z-index: 100;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.4s;
+            animation: pulse 2s infinite;
+        }
+        
+        .whatsapp-float:hover {
+            background-color: #128C7E;
+            transform: scale(1.1);
+        }
+        
+        .whatsapp-text {
+            visibility: hidden;
+            width: 200px;
+            background-color: #25d366;
+            color: white;
+            text-align: center;
+            border-radius: 6px;
+            padding: 8px;
+            position: fixed;
+            bottom: 85px;
+            right: 30px;
+            z-index: 100;
+            opacity: 0;
+            transition: opacity 0.3s;
+            font-weight: bold;
+            box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.2);
+        }
+        
+        .whatsapp-float:hover + .whatsapp-text {
+            visibility: visible;
+            opacity: 1;
+        }
+        
+        @keyframes pulse {
+            0% {
+                box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7);
+            }
+            70% {
+                box-shadow: 0 0 0 10px rgba(37, 211, 102, 0);
+            }
+            100% {
+                box-shadow: 0 0 0 0 rgba(37, 211, 102, 0);
+            }
+        }
+        
+        /* Footer */
+        footer {
+            background-color: var(--dark-color);
+            color: white;
+            padding: 2rem 0;
+            text-align: center;
+        }
+        
+        .footer-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+        
+        .footer-logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            margin-bottom: 1rem;
+            color: var(--secondary-color);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+        }
+        
+        .footer-links {
+            display: flex;
+            list-style: none;
+            margin-bottom: 1rem;
+            justify-content: center;
+            width: 100%;
+        }
+        
+        .footer-links li {
+            margin: 0 0.8rem;
+            display: inline-block;
+        }
+        
+        .footer-links a {
+            color: white;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        
+        .footer-links a:hover {
+            color: var(--secondary-color);
+            text-decoration: underline;
+        }
+        
+        .copyright {
+            width: 100%;
+            margin-top: 1.5rem;
+            padding-top: 1.5rem;
+            border-top: 1px solid #444;
+        }
+        
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .header-container {
+                flex-direction: column;
+            }
+            
+            nav ul {
+                margin-top: 1rem;
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+            
+            nav ul li {
+                margin: 0.5rem;
+            }
+            
+            .about-content {
+                grid-template-columns: 1fr;
+            }
+            
+            .catalog-actions {
+                flex-direction: column;
+                gap: 1rem;
+                align-items: flex-start;
+            }
+            
+            .filter-search {
+                width: 100%;
+                flex-direction: column;
+            }
+            
+            .footer-content {
+                flex-direction: column;
+            }
+            
+            .footer-links {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .footer-links li {
+                margin: 0.5rem 0;
+            }
+            
+            .whatsapp-float {
+                width: 50px;
+                height: 50px;
+                bottom: 20px;
+                right: 20px;
+                font-size: 24px;
+            }
+            
+            .whatsapp-text {
+                bottom: 75px;
+                right: 25px;
+                width: 160px;
+                font-size: 14px;
+            }
+            
+            .process-steps {
+                grid-template-columns: 1fr;
+            }
+            
+            .payment-methods {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- WhatsApp Button -->
+    <a href="https://wa.me/525616455990?text=Hola,%20me%20gustaría%20solicitar%20información%20y%20cotizar%20productos" class="whatsapp-float" target="_blank">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+    <div class="whatsapp-text">¡Cotiza por WhatsApp!</div>
+
+    <!-- Header -->
+    <header>
+        <div class="container header-container">
+            <div class="logo">
+                <i class="fas fa-store logo-icon"></i>
+                <h1>Abastecedora <span>Mary</span></h1>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#inicio">Inicio</a></li>
+                    <li><a href="#productos">Productos</a></li>
+                    <li><a href="#proceso">Cómo Comprar</a></li>
+                    <li><a href="#catalogo">Catálogo</a></li>
+                    <li><a href="#servicios">Servicios</a></li>
+                    <li><a href="#nosotros">Nosotros</a></li>
+                    <li><a href="#contacto">Contacto</a></li>
+                    <li><a href="#" id="loginBtn" class="login-btn">Iniciar Sesión</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="inicio">
+        <div class="container">
+            <h2>Abastecedora de Alimentos Mary</h2>
+            <p>Los mejores abarrotes, cremería, salchichonería, carnes, frutas, verduras y más, directamente a tu domicilio</p>
+            <a href="https://wa.me/525616455990?text=Hola,%20me%20gustaría%20solicitar%20información%20y%20cotizar%20productos" class="btn" target="_blank">
+                <i class="fab fa-whatsapp"></i> Cotizar por WhatsApp
+            </a>
+        </div>
+    </section>
+
+    <!-- Products Section -->
+    <section class="products" id="productos">
+        <div class="container">
+            <h2 class="section-title">Nuestras Categorías</h2>
+            <div class="categories">
+                <div class="category-card">
+                    <div class="category-img">
+                        <i class="fas fa-box"></i>
+                    </div>
+                    <div class="category-content">
+                        <h3>Abarrotes</h3>
+                        <p>Todo lo necesario para tu despensa: arroz, frijol, aceite, latas, y mucho más.</p>
+                    </div>
+                </div>
+                <div class="category-card">
+                    <div class="category-img">
+                        <i class="fas fa-cheese"></i>
+                    </div>
+                    <div class="category-content">
+                        <h3>Cremería</h3>
+                        <p>Leche, queso, crema, yogurt y otros productos lácteos frescos y de calidad.</p>
+                    </div>
+                </div>
+                <div class="category-card">
+                    <div class="category-img">
+                        <i class="fas fa-drumstick-bite"></i>
+                    </div>
+                    <div class="category-content">
+                        <h3>Salchichonería</h3>
+                        <p>Jamón, salchichas, tocino y una variedad de embutidos de la mejor calidad.</p>
+                    </div>
+                </div>
+                <div class="category-card">
+                    <div class="category-img">
+                        <i class="fas fa-apple-alt"></i>
+                    </div>
+                    <div class="category-content">
+                        <h3>Frutas & Verduras</h3>
+                        <p>Frutas y verduras frescas de temporada, seleccionadas para brindarte la mejor calidad.</p>
+                    </div>
+                </div>
+                <div class="category-card">
+                    <div class="category-img">
+                        <i class="fas fa-drumstick-bite"></i>
+                    </div>
+                    <div class="category-content">
+                        <h3>Carnes</h3>
+                        <p>Carne de res, cerdo, pollo y pescado. Cortes selectos y de la mejor calidad.</p>
+                    </div>
+                </div>
+                <div class="category-card">
+                    <div class="category-img">
+                        <i class="fas fa-candy-cane"></i>
+                    </div>
+                    <div class="category-content">
+                        <h3>Dulcería</h3>
+                        <p>Chocolates, caramelos, galletas y todo tipo de dulces para consentir tu paladar.</p>
+                    </div>
+                </div>
+                <div class="category-card">
+                    <div class="category-img">
+                        <i class="fas fa-pump-soap"></i>
+                    </div>
+                    <div class="category-content">
+                        <h3>Limpieza</h3>
+                        <p>Productos de limpieza para el hogar, personal y para mantener todo impecable.</p>
+                    </div>
+                </div>
+                <div class="category-card">
+                    <div class="category-img">
+                        <i class="fas fa-home"></i>
+                    </div>
+                    <div class="category-content">
+                        <h3>Hogar</h3>
+                        <p>Artículos para el hogar, utensilios de cocina y productos de uso diario.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Process Section -->
+    <section class="process" id="proceso">
+        <div class="container">
+            <div class="process-intro">
+                <h2>¡Tu Despensa a un Click de Distancia!</h2>
+                <p>Olvídate del tráfico, las filas interminables y cargar con pesadas bolsas. Llevamos todo lo que necesitas directamente a tu puerta. Pedir tu despensa nunca había sido tan fácil, rápido y seguro.</p>
+            </div>
+            
+            <div class="process-steps">
+                <div class="process-step">
+                    <div class="step-icon">
+                        <i class="fab fa-whatsapp"></i>
+                    </div>
+                    <h3>Escríbenos por WhatsApp</h3>
+                    <p>Haz clic en el botón de abajo para iniciar una conversación con nosotros directamente.</p>
+                </div>
+                
+                <div class="process-step">
+                    <div class="step-icon">
+                        <i class="fas fa-map-marker-alt"></i>
+                    </div>
+                    <h3>Comparte tu ubicación en tiempo real</h3>
+                    <p>Envíanos tu ubicación actual a través del chat para que podamos verificar que estamos en tu zona.</p>
+                </div>
+                
+                <div class="process-step">
+                    <div class="step-icon">
+                        <i class="fas fa-check-circle"></i>
+                    </div>
+                    <h3>Espera nuestra confirmación</h3>
+                    <p>En instantes, te confirmaremos si realizamos entregas en tu área.</p>
+                </div>
+                
+                <div class="process-step">
+                    <div class="step-icon">
+                        <i class="fas fa-list-alt"></i>
+                    </div>
+                    <h3>Mándanos tu lista de productos</h3>
+                    <p>Envíanos los artículos que necesitas (¡puede ser una foto de tu lista escrita o un mensaje de texto!).</p>
+                </div>
+                
+                <div class="process-step">
+                    <div class="step-icon">
+                        <i class="fas fa-calculator"></i>
+                    </div>
+                    <h3>Te cotizamos al instante</h3>
+                    <p>Revisaremos tu lista y te enviaremos el total de tu pedido sin compromiso.</p>
+                </div>
+                
+                <div class="process-step">
+                    <div class="step-icon">
+                        <i class="fas fa-clipboard-check"></i>
+                    </div>
+                    <h3>Confirma tu pedido y cuenta</h3>
+                    <p>Revisa la cotización y confírmanos que todo está en orden.</p>
+                </div>
+                
+                <div class="process-step">
+                    <div class="step-icon">
+                        <i class="fas fa-money-bill-wave"></i>
+                    </div>
+                    <h3>Elige tu método de pago</h3>
+                    <div class="payment-methods">
+                        <div class="payment-method">
+                            <i class="fas fa-money-bill"></i>
+                            <p>Efectivo</p>
+                            <small>Pagas al momento de recibir tu despensa</small>
+                        </div>
+                        <div class="payment-method">
+                            <i class="fas fa-mobile-alt"></i>
+                            <p>Transferencia/Déposito</p>
+                            <small>Realizas el pago previo a la entrega</small>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="process-step">
+                    <div class="step-icon">
+                        <i class="fas fa-truck"></i>
+                    </div>
+                    <h3>¡Agendamos la entrega!</h3>
+                    <p>Coordinamos contigo la hora o el día perfectos para llevarte tus productos frescos y de calidad.</p>
+                </div>
+            </div>
+            
+            <div class="process-cta">
+                <h3>¿Tienes dudas o necesitas algo especial?</h3>
+                <p>¿Quieres personalizar tu pedido, preguntar por un producto específico o necesitas ayuda para armar tu lista? Pregunta sin problema. Todo lo resolvemos al instante por el mismo chat de WhatsApp. ¡Estamos aquí para ayudarte!</p>
+                <a href="https://wa.me/525616455990?text=Hola,%20me%20gustaría%20hacer%20un%20pedido" class="btn" target="_blank" style="margin-top: 1.5rem;">
+                    <i class="fab fa-whatsapp"></i> Iniciar Pedido por WhatsApp
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Catalog Section -->
+    <section class="catalog" id="catalogo">
+        <div class="container">
+            <h2 class="section-title">Catálogo de Productos</h2>
+            
+            <div class="catalog-actions">
+                <div class="filter-search">
+                    <input type="text" id="searchProduct" placeholder="Buscar producto...">
+                    <select id="filterCategory">
+                        <option value="">Todas las categorías</option>
+                        <option value="abarrotes">Abarrotes</option>
+                        <option value="cremeria">Cremería</option>
+                        <option value="salchichoneria">Salchichonería</option>
+                        <option value="frutas-verduras">Frutas & Verduras</option>
+                        <option value="carnes">Carnes</option>
+                        <option value="dulceria">Dulcería</option>
+                        <option value="limpieza">Limpieza</option>
+                        <option value="hogar">Hogar</option>
+                    </select>
+                </div>
+                <button class="add-product-btn" id="openModal">Agregar Producto</button>
+            </div>
+            
+            <div class="products-grid" id="productsGrid">
+                <!-- Los productos se cargarán aquí dinámicamente -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Login Modal -->
+    <div class="modal" id="loginModal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>Iniciar Sesión</h2>
+                <button class="close-modal">&times;</button>
+            </div>
+            <form id="loginForm">
+                <div class="form-group">
+                    <label for="username">Usuario</label>
+                    <input type="text" id="username" required>
+                </div>
+                <div class="form-group">
+                    <label for="password">Contraseña</label>
+                    <input type="password" id="password" required>
+                </div>
+                <div class="form-actions">
+                    <button type="button" class="btn-cancel" id="cancelLogin">Cancelar</button>
+                    <button type="submit" class="btn-submit">Iniciar Sesión</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Add Product Modal -->
+    <div class="modal" id="productModal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>Agregar Nuevo Producto</h2>
+                <button class="close-modal">&times;</button>
+            </div>
+            <form id="productForm">
+                <div class="form-group">
+                    <label for="productName">Nombre del Producto</label>
+                    <input type="text" id="productName" required>
+                </div>
+                <div class="form-group">
+                    <label for="productCategory">Categoría</label>
+                    <select id="productCategory" required>
+                        <option value="">Seleccione una categoría</option>
+                        <option value="abarrotes">Abarrotes</option>
+                        <option value="cremeria">Cremería</option>
+                        <option value="salchichoneria">Salchichonería</option>
+                        <option value="frutas-verduras">Frutas & Verduras</option>
+                        <option value="carnes">Carnes</option>
+                        <option value="dulceria">Dulcería</option>
+                        <option value="limpieza">Limpieza</option>
+                        <option value="hogar">Hogar</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="productPrice">Precio ($)</label>
+                    <input type="number" id="productPrice" min="0" step="0.01" required>
+                </div>
+                
+                <!-- Área de arrastre de imágenes -->
+                <div class="drop-area" id="dropArea">
+                    <div class="drop-area-icon">
+                        <i class="fas fa-cloud-upload-alt"></i>
+                    </div>
+                    <p>Arrastra una imagen aquí o haz clic para seleccionar</p>
+                    <input type="file" id="fileInput" accept="image/*" style="display: none;">
+                    <button type="button" id="selectImageBtn" class="btn-submit" style="padding: 0.5rem 1rem;">Seleccionar imagen</button>
+                </div>
+                
+                <div class="image-preview" id="imagePreview">
+                    <img src="" alt="Vista previa de la imagen">
+                </div>
+                
+                <div class="form-group">
+                    <label for="productDescription">Descripción (opcional)</label>
+                    <textarea id="productDescription" rows="3"></textarea>
+                </div>
+                <div class="form-actions">
+                    <button type="button" class="btn-cancel" id="cancelForm">Cancelar</button>
+                    <button type="submit" class="btn-submit">Guardar Producto</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Services Section -->
+    <section class="services" id="servicios">
+        <div class="container">
+            <h2 class="section-title">Nuestros Servicios</h2>
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-truck"></i>
+                    </div>
+                    <h3>Entrega a Domicilio</h3>
+                    <p>Llevamos tus productos hasta la puerta de tu casa, sin costo adicional.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-comments"></i>
+                    </div>
+                    <h3>Atención Personalizada</h3>
+                    <p>Te asesoramos en la selección de productos y resolvemos todas tus dudas.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-check-circle"></i>
+                    </div>
+                    <h3>Calidad Garantizada</h3>
+                    <p>Todos nuestros productos son seleccionados cuidadosamente para garantizar su frescura y calidad.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about" id="nosotros">
+        <div class="container">
+            <h2 class="section-title">Sobre Nosotros</h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <h2>Abastecedora de Alimentos Mary</h2>
+                    <p>Somos una empresa familiar con más de 10 años de experiencia en el sector de abarrotes y alimentos. Nos enorgullece ofrecer productos de la más alta calidad a precios competitivos.</p>
+                    <p>Nuestra misión es simplificar tu vida llevándote los mejores productos directamente a tu hogar, con el servicio amable y personalizado que nos caracteriza.</p>
+                    <p>En Abastecedora de Alimentos Mary, encontrarás todo lo necesario para tu despensa, con la garantía de frescura y calidad que nos distingue.</p>
+                </div>
+                <div class="about-image">
+                <img src="imagenes/MUJER EN MOSTRADOR.jpeg" alt="Nuestra tienda Abastecedora Mary" style="width: 100%; height: 100%; object-fit: cover; border-radius: 10px;">
+                </div>
+            </div>
+        </div>q
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact" id="contacto">
+        <div class="container">
+            <h2 class="section-title">Contacto</h2>
+            <div class="contact-info">
+                <h3>Información de Contacto</h3>
+                <p><i class="fas fa-map-marker-alt"></i> Dirección: <a href="https://maps.app.goo.gl/t4bBhoaFghpugY2x7" class="map-link" target="_blank">Ver en Google Maps</a></p>
+                <p><i class="fab fa-whatsapp"></i> WhatsApp: 56 1645 5990</p>
+                <p><i class="fas fa-clock"></i> Horario de servicio a domicilio: 9:00 a.m. a 5:00 p.m. (De lunes a domingo, excepto miércoles)</p>
+                <p><i class="fas fa-store"></i> Horario en sucursal: 7:00 a.m. a 10:00 p.m. (De lunes a domingo, excepto miércoles)</p>
+                <p><i class="fas fa-truck"></i> Entregas a domicilio sin costo adicional en zona centro</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">Abastecedora de Alimentos Mary</div>
+                <ul class="footer-links">
+                    <li><a href="#inicio">Inicio</a></li>
+                    <li><a href="#productos">Productos</a></li>
+                    <li><a href="#proceso">Cómo Comprar</a></li>
+                    <li><a href="#catalogo">Catálogo</a></li>
+                    <li><a href="#servicios">Servicios</a></li>
+                    <li><a href="#nosotros">Nosotros</a></li>
+                    <li><a href="#contacto">Contacto</a></li>
+                </ul>
+                <div class="copyright">
+                    <p>&copy; 2023 Abastecedora de Alimentos Mary. Todos los derechos reservados.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Almacenamiento de productos
+        let products = JSON.parse(localStorage.getItem('products')) || [];
+        let isLoggedIn = localStorage.getItem('isLoggedIn') === 'true';
+        let currentImageFile = null;
+        
+        // Elementos del DOM
+        const productsGrid = document.getElementById('productsGrid');
+        const productModal = document.getElementById('productModal');
+        const loginModal = document.getElementById('loginModal');
+        const productForm = document.getElementById('productForm');
+        const loginForm = document.getElementById('loginForm');
+        const openModalBtn = document.getElementById('openModal');
+        const loginBtn = document.getElementById('loginBtn');
+        const closeModalBtns = document.querySelectorAll('.close-modal');
+        const cancelFormBtn = document.getElementById('cancelForm');
+        const cancelLoginBtn = document.getElementById('cancelLogin');
+        const searchInput = document.getElementById('searchProduct');
+        const filterSelect = document.getElementById('filterCategory');
+        const dropArea = document.getElementById('dropArea');
+        const fileInput = document.getElementById('fileInput');
+        const selectImageBtn = document.getElementById('selectImageBtn');
+        const imagePreview = document.getElementById('imagePreview');
+        
+        // Verificar si el usuario está logueado
+        function checkLoginStatus() {
+            if (isLoggedIn) {
+                openModalBtn.style.display = 'block';
+                loginBtn.textContent = 'Cerrar Sesión';
+                showAdminButtons();
+            } else {
+                openModalBtn.style.display = 'none';
+                loginBtn.textContent = 'Iniciar Sesión';
+                hideAdminButtons();
+            }
+        }
+        
+        // Mostrar botones de administrador
+        function showAdminButtons() {
+            const actionButtons = document.querySelectorAll('.product-actions button');
+            actionButtons.forEach(button => {
+                button.style.display = 'block';
+            });
+        }
+        
+        // Ocultar botones de administrador
+        function hideAdminButtons() {
+            const actionButtons = document.querySelectorAll('.product-actions button');
+            actionButtons.forEach(button => {
+                button.style.display = 'none';
+            });
+        }
+        
+        // Función para renderizar productos
+        function renderProducts() {
+            const searchTerm = searchInput.value.toLowerCase();
+            const categoryFilter = filterSelect.value;
+            
+            const filteredProducts = products.filter(product => {
+                const matchesSearch = product.name.toLowerCase().includes(searchTerm) || 
+                                     (product.description && product.description.toLowerCase().includes(searchTerm));
+                const matchesCategory = categoryFilter === '' || product.category === categoryFilter;
+                return matchesSearch && matchesCategory;
+            });
+            
+            productsGrid.innerHTML = '';
+            
+            if (filteredProducts.length === 0) {
+                productsGrid.innerHTML = '<p class="no-products">No se encontraron productos.</p>';
+                return;
+            }
+            
+            filteredProducts.forEach((product, index) => {
+                const productCard = document.createElement('div');
+                productCard.className = 'product-card';
+                productCard.innerHTML = `
+                    <div class="product-image">
+                        ${product.imageData ? 
+                            `<img src="${product.imageData}" alt="${product.name}">` : 
+                            `<i class="fas ${getCategoryIcon(product.category)}"></i>`
+                        }
+                    </div>
+                    <div class="product-info">
+                        <span class="product-category">${getCategoryName(product.category)}</span>
+                        <h3>${product.name}</h3>
+                        <p class="product-price">$${product.price.toFixed(2)}</p>
+                        ${product.description ? `<p>${product.description}</p>` : ''}
+                        <div class="product-actions">
+                            <button onclick="editProduct(${index})">Editar</button>
+                            <button onclick="deleteProduct(${index})">Eliminar</button>
+                        </div>
+                    </div>
+                `;
+                productsGrid.appendChild(productCard);
+            });
+            
+            checkLoginStatus();
+        }
+        
+        // Obtener icono según categoría
+        function getCategoryIcon(category) {
+            const icons = {
+                'abarrotes': 'fa-box',
+                'cremeria': 'fa-cheese',
+                'salchichoneria': 'fa-drumstick-bite',
+                'frutas-verduras': 'fa-apple-alt',
+                'carnes': 'fa-drumstick-bite',
+                'dulceria': 'fa-candy-cane',
+                'limpieza': 'fa-pump-soap',
+                'hogar': 'fa-home'
+            };
+            return icons[category] || 'fa-shopping-basket';
+        }
+        
+        // Obtener nombre de categoría
+        function getCategoryName(category) {
+            const names = {
+                'abarrotes': 'Abarrotes',
+                'cremeria': 'Cremería',
+                'salchichoneria': 'Salchichonería',
+                'frutas-verduras': 'Frutas & Verduras',
+                'carnes': 'Carnes',
+                'dulceria': 'Dulcería',
+                'limpieza': 'Limpieza',
+                'hogar': 'Hogar'
+            };
+            return names[category] || 'General';
+        }
+        
+        // Función para mostrar vista previa de la imagen
+        function previewImage(file) {
+            const reader = new FileReader();
+            
+            reader.onload = function(e) {
+                imagePreview.style.display = 'block';
+                imagePreview.querySelector('img').src = e.target.result;
+            }
+            
+            reader.readAsDataURL(file);
+            currentImageFile = file;
+        }
+        
+        // Configurar arrastre de imágenes
+        ['dragenter', 'dragover', 'dragleave', 'drop'].forEach(eventName => {
+            dropArea.addEventListener(eventName, preventDefaults, false);
+        });
+        
+        function preventDefaults(e) {
+            e.preventDefault();
+            e.stopPropagation();
+        }
+        
+        ['dragenter', 'dragover'].forEach(eventName => {
+            dropArea.addEventListener(eventName, highlight, false);
+        });
+        
+        ['dragleave', 'drop'].forEach(eventName => {
+            dropArea.addEventListener(eventName, unhighlight, false);
+        });
+        
+        function highlight() {
+            dropArea.classList.add('highlight');
+        }
+        
+        function unhighlight() {
+            dropArea.classList.remove('highlight');
+        }
+        
+        dropArea.addEventListener('drop', handleDrop, false);
+        
+        function handleDrop(e) {
+            const dt = e.dataTransfer;
+            const files = dt.files;
+            
+            if (files.length) {
+                handleFiles(files);
+            }
+        }
+        
+        function handleFiles(files) {
+            const file = files[0];
+            
+            if (file.type.startsWith('image/')) {
+                previewImage(file);
+            } else {
+                alert('Por favor, selecciona solo archivos de imagen.');
+            }
+        }
+        
+        selectImageBtn.addEventListener('click', () => {
+            fileInput.click();
+        });
+        
+        fileInput.addEventListener('change', (e) => {
+            if (fileInput.files.length) {
+                handleFiles(fileInput.files);
+            }
+        });
+        
+        // Agregar nuevo producto
+        productForm.addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            let imageData = null;
+            if (currentImageFile) {
+                const reader = new FileReader();
+                reader.onload = function(e) {
+                    imageData = e.target.result;
+                    saveProduct(imageData);
+                }
+                reader.readAsDataURL(currentImageFile);
+            } else {
+                saveProduct(null);
+            }
+        });
+        
+        function saveProduct(imageData) {
+            const newProduct = {
+                name: document.getElementById('productName').value,
+                category: document.getElementById('productCategory').value,
+                price: parseFloat(document.getElementById('productPrice').value),
+                imageData: imageData,
+                description: document.getElementById('productDescription').value
+            };
+            
+            products.push(newProduct);
+            localStorage.setItem('products', JSON.stringify(products));
+            
+            productForm.reset();
+            imagePreview.style.display = 'none';
+            currentImageFile = null;
+            productModal.style.display = 'none';
+            renderProducts();
+            
+            alert('Producto agregado correctamente!');
+        }
+        
+        // Editar producto
+        window.editProduct = function(index) {
+            if (!isLoggedIn) {
+                alert('Debe iniciar sesión para editar productos');
+                return;
+            }
+            
+            const product = products[index];
+            
+            document.getElementById('productName').value = product.name;
+            document.getElementById('productCategory').value = product.category;
+            document.getElementById('productPrice').value = product.price;
+            document.getElementById('productDescription').value = product.description || '';
+            
+            if (product.imageData) {
+                imagePreview.style.display = 'block';
+                imagePreview.querySelector('img').src = product.imageData;
+                currentImageFile = null;
+            } else {
+                imagePreview.style.display = 'none';
+            }
+            
+            productModal.style.display = 'flex';
+            
+            // Cambiar el formulario para editar
+            productForm.onsubmit = function(e) {
+                e.preventDefault();
+                
+                let imageData = product.imageData;
+                if (currentImageFile) {
+                    const reader = new FileReader();
+                    reader.onload = function(e) {
+                        imageData = e.target.result;
+                        updateProduct(index, imageData);
+                    }
+                    reader.readAsDataURL(currentImageFile);
+                } else {
+                    updateProduct(index, imageData);
+                }
+            };
+        };
+        
+        function updateProduct(index, imageData) {
+            products[index] = {
+                name: document.getElementById('productName').value,
+                category: document.getElementById('productCategory').value,
+                price: parseFloat(document.getElementById('productPrice').value),
+                imageData: imageData,
+                description: document.getElementById('productDescription').value
+            };
+            
+            localStorage.setItem('products', JSON.stringify(products));
+            
+            productForm.reset();
+            imagePreview.style.display = 'none';
+            currentImageFile = null;
+            productModal.style.display = 'none';
+            renderProducts();
+            
+            alert('Producto actualizado correctamente!');
+            
+            // Restaurar el comportamiento original del formulario
+            productForm.onsubmit = null;
+            productForm.addEventListener('submit', arguments.callee);
+        }
+        
+        // Eliminar producto
+        window.deleteProduct = function(index) {
+            if (!isLoggedIn) {
+                alert('Debe iniciar sesión para eliminar productos');
+                return;
+            }
+            
+            if (confirm('¿Estás seguro de que quieres eliminar este producto?')) {
+                products.splice(index, 1);
+                localStorage.setItem('products', JSON.stringify(products));
+                renderProducts();
+            }
+        };
+        
+        // Abrir modal de producto
+        openModalBtn.addEventListener('click', function() {
+            if (!isLoggedIn) {
+                alert('Debe iniciar sesión para agregar productos');
+                return;
+            }
+            
+            productForm.reset();
+            imagePreview.style.display = 'none';
+            currentImageFile = null;
+            
+            productForm.onsubmit = function(e) {
+                e.preventDefault();
+                
+                let imageData = null;
+                if (currentImageFile) {
+                    const reader = new FileReader();
+                    reader.onload = function(e) {
+                        imageData = e.target.result;
+                        saveProduct(imageData);
+                    }
+                    reader.readAsDataURL(currentImageFile);
+                } else {
+                    saveProduct(null);
+                }
+            };
+            
+            productModal.style.display = 'flex';
+        });
+        
+        // Abrir modal de login
+        loginBtn.addEventListener('click', function(e) {
+            e.preventDefault();
+            
+            if (isLoggedIn) {
+                // Cerrar sesión
+                isLoggedIn = false;
+                localStorage.setItem('isLoggedIn', 'false');
+                checkLoginStatus();
+                alert('Sesión cerrada correctamente');
+            } else {
+                // Abrir modal de login
+                loginModal.style.display = 'flex';
+            }
+        });
+        
+        // Procesar login
+        loginForm.addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const username = document.getElementById('username').value;
+            const password = document.getElementById('password').value;
+            
+            if (username === 'EMILIO.HUITRON' && password === 'Em58600280') {
+                isLoggedIn = true;
+                localStorage.setItem('isLoggedIn', 'true');
+                loginModal.style.display = 'none';
+                loginForm.reset();
+                checkLoginStatus();
+                alert('Sesión iniciada correctamente');
+            } else {
+                alert('Usuario o contraseña incorrectos');
+            }
+        });
+        
+        // Cerrar modales
+        closeModalBtns.forEach(btn => {
+            btn.addEventListener('click', function() {
+                productModal.style.display = 'none';
+                loginModal.style.display = 'none';
+            });
+        });
+        
+        cancelFormBtn.addEventListener('click', function() {
+            productModal.style.display = 'none';
+        });
+        
+        cancelLoginBtn.addEventListener('click', function() {
+            loginModal.style.display = 'none';
+        });
+        
+        // Cerrar modal al hacer clic fuera
+        window.addEventListener('click', function(e) {
+            if (e.target === productModal) {
+                productModal.style.display = 'none';
+            }
+            if (e.target === loginModal) {
+                loginModal.style.display = 'none';
+            }
+        });
+        
+        // Filtrar productos
+        searchInput.addEventListener('input', renderProducts);
+        filterSelect.addEventListener('change', renderProducts);
+        
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                if (targetId === '#') return;
+                
+                const targetElement = document.querySelector(targetId);
+                if (targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+        
+        // Inicializar la visualización de productos
+        checkLoginStatus();
+        renderProducts();
+    </script>
+</body>
+</html>
